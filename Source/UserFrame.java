@@ -82,10 +82,9 @@ public class UserFrame extends JFrame implements Observer {
 		listFollowing = new JList(user.getCurrentlyFollowingListModel());
 		scrollPane.setViewportView(listFollowing);
 		
-		JTextArea txtrCurrentlyFollowing = new JTextArea();
-		txtrCurrentlyFollowing.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		txtrCurrentlyFollowing.setText("Currently Following");
-		scrollPane.setColumnHeaderView(txtrCurrentlyFollowing);
+		JLabel lblCurrentlyFollowing = new JLabel("Currently Following");
+		lblCurrentlyFollowing.setFont(new Font("Lucida Grande", Font.BOLD, 13));
+		scrollPane.setColumnHeaderView(lblCurrentlyFollowing);
 		//Tweet message in txtrTweetMessage when btnPostTweet is clicked 
 		JButton btnPostTweet = new JButton("Post Tweet");
 		btnPostTweet.addMouseListener(new MouseAdapter() {
@@ -104,10 +103,9 @@ public class UserFrame extends JFrame implements Observer {
 		listNewsFeed = new JList(user.getNewsFeed().getListModel());
 		scrollPane_1.setViewportView(listNewsFeed);
 		
-		JTextArea txtrNewsFeed = new JTextArea();
-		txtrNewsFeed.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		txtrNewsFeed.setText("News Feed");
-		scrollPane_1.setColumnHeaderView(txtrNewsFeed);
+		JLabel lblNewsFeed = new JLabel("News Feed");
+		lblNewsFeed.setFont(new Font("Lucida Grande", Font.BOLD, 13));
+		scrollPane_1.setColumnHeaderView(lblNewsFeed);
 		
 		txtrUserId = new JTextArea();
 		txtrUserId.setText("User ID");
